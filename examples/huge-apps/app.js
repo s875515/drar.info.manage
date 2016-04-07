@@ -3,6 +3,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { Router, browserHistory } from 'react-router'
 import stubbedCourses from './stubs/COURSES'
+import $ from './js/jquery-1.11.2.min'
 
 const rootRoute = {
   component: 'div',

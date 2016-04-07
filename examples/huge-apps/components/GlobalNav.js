@@ -42,8 +42,8 @@ class GlobalNav extends React.Component {
       <div style={styles.wrapper}>
         <div style={{ float: 'left' }}>
           <Link to="/" style={styles.link}>Home</Link>{' '}
-          <Link to="/calendar" style={styles.link} activeStyle={styles.activeLink}>Calendar</Link>{' '}
-          <Link to="/grades" style={styles.link} activeStyle={styles.activeLink}>Grades</Link>{' '}
+          <Link to="/calendar" style={styles.link} activeStyle={styles.activeLink}>影片清單</Link>{' '}
+          <Link to="/grades" style={styles.link} activeStyle={styles.activeLink}>分類</Link>{' '}
           <Link to="/messages" style={styles.link} activeStyle={styles.activeLink}>Messages</Link>{' '}
         </div>
         <div style={{ float: 'right' }}>

@@ -3,6 +3,7 @@ global.COURSES = [
     id: 0,
     name: 'React Fundamentals',
     grade: 'B',
+    title: 'There is no class tomorrow, please do not show up',
     announcements: [
       {
         id: 0,
@@ -25,6 +26,7 @@ global.COURSES = [
     id: 1,
     name: 'Reusable React Components',
     grade: 'A-',
+    title: 'You had better prepare',
     announcements: [
       {
         id: 0,

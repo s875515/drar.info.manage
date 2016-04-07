@@ -1,5 +1,6 @@
 /*globals COURSES:true */
 import React from 'react'
+import { Link } from 'react-router'
 import Dashboard from './Dashboard'
 import Nav from './Nav'
 
@@ -41,6 +42,7 @@ class Course extends React.Component {
         <h2>{course.name}</h2>
         <Nav course={course} />
         {content}
+        <Link to="/" style={styles.link}>回上頁</Link>{' '}
       </div>
     )
   }
