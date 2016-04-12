@@ -7,11 +7,6 @@ import CSSModules from 'react-css-modules';
 import globalStyles from '../style/app';
 import styles from './styles.css';
 class Table extends Component {
-  constructor() {
-    super();
-  }
-  componentDidMount() {
-  }
   render() {
     const {data} = this.props;
     const lists = Object.keys(data).map(key => {
@@ -33,7 +28,6 @@ class Table extends Component {
         <table styleName="table">
           <thead>
               <tr>
-                  <th styleName="header th" >#</th>
                   <th styleName="header th" >標題</th>
                   <th styleName="header th" >網址</th>
                   <th styleName="header th" >審核</th>
@@ -43,20 +37,17 @@ class Table extends Component {
           <tbody>
              {lists.map((list, i) => (
               <tr key={i}>
-                    <th styleName="tbTh">
-                      {list.date}
-                    </th>
                     <td styleName="td _center">
                       {list.title}
                     </td>
-                    <td styleName="td">
-						          <a href={list.url} target="_blank">{list.url}</a>
+                    <td styleName="td _center">
+						          <img src={list.img} />
                     </td>
                     <td styleName="td _center">
                     	<CheckVideo />
                     </td>
                     <td styleName="td _center">
-                    	<ViewVideo src={list.img} text={list.title} embed={list.embed} />
+                    	<ViewVideo src={list.img} tag={list.tags} area={list.location} text={list.title} embed={list.embed} date={list.date}　desc={list.desc} />
                     </td>
               </tr>
             ))}              

@@ -2,6 +2,8 @@ import React, {Component, PropTypes} from 'react';
 import Dialog from 'material-ui/lib/dialog';
 import FlatButton from 'material-ui/lib/flat-button';
 import RaisedButton from 'material-ui/lib/raised-button';
+import CSSModules from 'react-css-modules';
+import styles from './styles.css';
 
 export default class ViewVideo extends Component {
   constructor(props) {
@@ -9,7 +11,6 @@ export default class ViewVideo extends Component {
     this.state = {
       open: false
     };
-    this.handleOpen = this.handleOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
   }
 
@@ -34,7 +35,7 @@ export default class ViewVideo extends Component {
 
     return (
       <div>
-        <RaisedButton src={this.props.src} onClick={this.handleOpen}>詳細</RaisedButton>
+        <RaisedButton src={this.props.src} onClick={this.handleOpen.bind(this)}>詳細</RaisedButton>
         <Dialog
           title={this.props.text}
           actions={actions}
@@ -43,8 +44,14 @@ export default class ViewVideo extends Component {
           onRequestClose={this.handleClose}
         >
         <iframe
-          className="youtube-embed" src={`https://www.youtube.com/embed/${this.props.embed}`}
-          frameBorder='0'></iframe>
+          styleName="youtube-embed" src={`https://www.youtube.com/embed/${this.props.embed}`}
+          frameBorder='0' />
+        <ul>
+          <li><b>地點：</b>{this.props.area}</li>
+          <li><b>描述：</b>{this.props.desc}</li>
+          <li><b>日期：</b>{this.props.date}</li>
+          <li><b>標籤：</b>{this.props.tag}</li>
+        </ul>      
         </Dialog>
       </div>
     );
@@ -56,3 +63,5 @@ ViewVideo.propTypes = {
   src: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
 };
+
+export default CSSModules(ViewVideo, styles);
