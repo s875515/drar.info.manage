@@ -28,16 +28,16 @@ class Table extends Component {
         <table styleName="table">
           <thead>
               <tr>
-                  <th styleName="header th" >標題</th>
-                  <th styleName="header th" >網址</th>
-                  <th styleName="header th" >審核</th>
-                  <th styleName="header th" >詳細</th>
+                  <th width="60%" styleName="header th" >標題</th>
+                  <th width="20%" styleName="header th" >網址</th>
+                  <th width="10%" styleName="header th" >審核</th>
+                  <th width="10%" styleName="header th" >詳細</th>
               </tr>
           </thead>
           <tbody>
              {lists.map((list, i) => (
               <tr key={i}>
-                    <td styleName="td _center">
+                    <td styleName="td tdTit">
                       {list.title}
                     </td>
                     <td styleName="td _center">

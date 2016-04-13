@@ -122,6 +122,12 @@ ul li:last-child span:after{
 .table a{
   cursor: pointer;
 }
+
+.table img{
+  width: 250px;
+  height: 160px;
+}
+
 .th{
   border: 1px solid #ddd;
   vertical-align: middle;
@@ -129,24 +135,17 @@ ul li:last-child span:after{
   padding: 8px;
   line-height: 1.42857143
 }
-.tbTh{
-  border: 1px solid #ddd;
-  vertical-align: middle;
-  border-bottom-width: 1px;
-  padding: 8px;
-  line-height: 1.42857143;
-}
 .td{
   border: 1px solid #ddd;
   vertical-align: middle;
   padding: 8px;
   line-height: 1.42857143
 }
+.tdTit{
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 2em;
+}
 ._center{
   text-align: center;
-}
-
-.table img{
-  width: 250px;
-  height: 160px;
 }
